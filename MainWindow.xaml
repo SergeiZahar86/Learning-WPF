@@ -6,18 +6,46 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF95CA51</Color>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Red"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Orange"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid x:Name="MyGrid" Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <TextBox Name="txt1" Grid.Row="0"  Margin="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
               FontFamily="Arial" AcceptsReturn="True" FontSize="20"  
-                 BorderThickness="0,0,0,20" BorderBrush="Transparent"></TextBox>
+                 BorderThickness="0,0,0,20"  >
+     
+        </TextBox>
         <TextBox Name="txt2" Grid.Row="1"  Margin="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
               FontFamily="Arial" AcceptsReturn="True" FontSize="20"  
-                 BorderThickness="0,0,0,20" BorderBrush="Transparent"></TextBox>
-        
+                 BorderThickness="0,0,0,20"></TextBox>
+
     </Grid>
 </Window>
