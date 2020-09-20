@@ -6,16 +6,18 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MyGrid">
+    <Grid x:Name="MyGrid" Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         
         <TextBox Name="txt1" Grid.Row="0"  Margin="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-              FontFamily="Arial" AcceptsReturn="True" FontSize="20" Foreground="Blue" BorderThickness="0,0,0,20"></TextBox>
+              FontFamily="Arial" AcceptsReturn="True" FontSize="20"  
+                 BorderThickness="0,0,0,20" BorderBrush="Transparent"></TextBox>
         <TextBox Name="txt2" Grid.Row="1"  Margin="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-              FontFamily="Arial" AcceptsReturn="True" FontSize="20" Foreground="Blue" BorderThickness="0,0,0,20"></TextBox>
+              FontFamily="Arial" AcceptsReturn="True" FontSize="20"  
+                 BorderThickness="0,0,0,20" BorderBrush="Transparent"></TextBox>
         
     </Grid>
 </Window>
