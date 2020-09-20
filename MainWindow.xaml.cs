@@ -24,5 +24,10 @@ namespace Learning_WPF
         {
             InitializeComponent();
         }
+
+        private void txt1_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
     }
 }
