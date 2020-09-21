@@ -18,7 +18,7 @@
                     fa5:Awesome.Content="Brands_Android" FontSize="30" Foreground="Red" PreviewMouseDown="page2_click"/>
         </DockPanel>
         <Frame x:Name="MainFrame" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" DockPanel.Dock="Bottom"
-               Height="526" Width="792" Margin="-120,0,0,0" />
+               Height="526" Width="792" Margin="-120,0,0,0" NavigationUIVisibility="Hidden"/>
 
     </DockPanel>
 
