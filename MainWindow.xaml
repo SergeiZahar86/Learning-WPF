@@ -4,13 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Learning_WPF"
+        xmlns:fa5="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
        
     </Window.Resources>
-    <Frame >
-        
-    </Frame>
-    
+    <DockPanel x:Name="RootWindow" Background="#FFE7D3">
+        <DockPanel x:Name="TitleBar" VerticalAlignment="Top"  Background="Aqua" Height="40px">
+            <Button x:Name="button1" HorizontalAlignment="Left" Width="60px" Background="Aqua"
+                    fa5:Awesome.Content="Solid_Ad" FontSize="30" Foreground="Red" PreviewMouseDown="page1_click"/>
+            <Button x:Name="button2" HorizontalAlignment="Left" Width="60px" Background="Aqua"
+                    fa5:Awesome.Content="Brands_Android" FontSize="30" Foreground="Red" PreviewMouseDown="page2_click"/>
+        </DockPanel>
+        <Frame x:Name="MainFrame" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" DockPanel.Dock="Bottom"
+               Height="526" Width="792" Margin="-120,0,0,0" />
+
+    </DockPanel>
+
 </Window>

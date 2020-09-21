@@ -15,19 +15,21 @@ using System.Windows.Shapes;
 
 namespace Learning_WPF
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void txt1_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void page1_click(object sender, MouseButtonEventArgs e)
         {
-
+            Page1 p = new Page1();
+            MainFrame.Navigate(p);
+        }
+        private void page2_click(object sender, MouseButtonEventArgs e)
+        {
+            Page2 p = new Page2();
+            MainFrame.Navigate(p);
         }
     }
 }
