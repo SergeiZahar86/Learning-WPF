@@ -10,7 +10,7 @@
         <Color x:Key="Color1">#FF95CA51</Color>
         <Style TargetType="TextBox">
             <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0,0,0,10"/>
+            <Setter Property="BorderThickness" Value="0,0,0,11"/>
             <Setter Property="Margin" Value="50"/>
             <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
             <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
