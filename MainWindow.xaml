@@ -41,7 +41,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid x:Name="MyGrid" Background="Gray">
+    <Grid x:Name="MyGrid" Background="Bisque">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
