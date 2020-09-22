@@ -4,51 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Learning_WPF"
+        xmlns:fa5="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
-        <Color x:Key="Color1">#FF95CA51</Color>
-        <Style TargetType="TextBox">
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0,0,0,10"/>
-            <Setter Property="Margin" Value="50"/>
-            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="AcceptsReturn" Value="True"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontFamily" Value="arial"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
-                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
-                                SnapsToDevicePixels="True">
-                            <ScrollViewer x:Name="PART_ContentHost" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" TargetName="border" Value="Red"/>
-                            </Trigger>
-                            <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter Property="BorderBrush" TargetName="border" Value="Orange"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+       
     </Window.Resources>
-    <Grid x:Name="MyGrid" Background="Gray">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <DockPanel x:Name="RootWindow" Background="#FFE7D3">
+        <DockPanel x:Name="TitleBar" VerticalAlignment="Top"  Background="Aqua" Height="40px">
+            <Button x:Name="button1" HorizontalAlignment="Left" Width="60px" Background="Aqua"
+                    fa5:Awesome.Content="Solid_Ad" FontSize="30" Foreground="Red" PreviewMouseDown="page1_click"/>
+            <Button x:Name="button2" HorizontalAlignment="Left" Width="60px" Background="Aqua"
+                    fa5:Awesome.Content="Brands_Android" FontSize="30" Foreground="Red" PreviewMouseDown="page2_click"/>
+        </DockPanel>
+        <Frame x:Name="MainFrame" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" DockPanel.Dock="Bottom"
+               Height="526" Width="792" Margin="-120,0,0,0" NavigationUIVisibility="Visible" JournalOwnership="OwnsJournal"/>
 
-        <TextBox Name="txt1" Grid.Row="0"></TextBox>
-        <TextBox Name="txt2" Grid.Row="1"></TextBox>
+    </DockPanel>
 
-    </Grid>
 </Window>
