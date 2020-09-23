@@ -20,7 +20,7 @@
                     FontSize="30" PreviewMouseDown="page2_click"/>
         </DockPanel>
         <Frame x:Name="MainFrame" Margin="-120,0,0,0" NavigationUIVisibility="Hidden" 
-               VerticalAlignment="Bottom" Height="381" HorizontalAlignment="Stretch"/>
+               VerticalAlignment="Bottom" Height="380" HorizontalAlignment="Stretch"/>
     </DockPanel>
    
 </Window>
