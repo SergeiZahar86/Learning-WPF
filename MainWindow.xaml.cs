@@ -19,5 +19,10 @@ namespace Learning_WPF
             Page2 p = new Page2();
             MainFrame.Navigate(p);
         }
+        private void dialogWindow_click(object sender, RoutedEventArgs e)
+        {
+            DialogWindoW dialogWindoW = new DialogWindoW();
+            dialogWindoW.ShowDialog();
+        }
     }
 }

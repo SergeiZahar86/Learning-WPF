@@ -8,19 +8,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-       
+
     </Window.Resources>
     <DockPanel x:Name="doc" Background="Bisque">
         <DockPanel VerticalAlignment="Top" Height="40" Background="#FFDD9191">
             <Button x:Name="page1" fa5:Awesome.Content="Regular_ArrowAltCircleLeft" 
                     HorizontalAlignment="Left" Width="60" Background="Bisque"
-                    FontSize="30" PreviewMouseDown="page1_click"/>
+                    FontSize="30" PreviewMouseDown="page1_click" BorderBrush="Bisque"/>
             <Button x:Name="page2" fa5:Awesome.Content="Regular_ArrowAltCircleRight" 
                     HorizontalAlignment="Left" Width="60" Background="Bisque"
-                    FontSize="30" PreviewMouseDown="page2_click"/>
+                    FontSize="30" PreviewMouseDown="page2_click" BorderBrush="Bisque"/>
+            <Button x:Name="dialog_window" fa5:Awesome.Content="Brands_Apple" Width="60" Background="Bisque"
+                    FontSize="30" Click="dialogWindow_click" BorderBrush="Bisque" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
         </DockPanel>
-        <Frame x:Name="MainFrame" Margin="-120,0,0,0" NavigationUIVisibility="Hidden" 
+        <Frame x:Name="MainFrame" Margin="-180,0,0,0" NavigationUIVisibility="Hidden" 
                VerticalAlignment="Bottom" Height="380" HorizontalAlignment="Stretch"/>
     </DockPanel>
-   
+
 </Window>
