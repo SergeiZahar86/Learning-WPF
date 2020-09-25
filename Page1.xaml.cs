@@ -20,9 +20,21 @@ namespace Learning_WPF
     /// </summary>
     public partial class Page1 : Page
     {
+        private Global global;
         public Page1()
         {
             InitializeComponent();
+            global = Global.getInstance();
+        }
+
+        private void button1_page1_Click(object sender, RoutedEventArgs e)
+        {
+            global.Name = "Ренат";
+        }
+
+        private void button2_page1_Click(object sender, RoutedEventArgs e)
+        {
+            label_page1.Content = global.Name;
         }
     }
 }

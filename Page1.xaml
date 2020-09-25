@@ -5,12 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Learning_WPF"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
+       d:DesignHeight="400" d:DesignWidth="800"
       Title="Page1">
-    <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
-        <TextBox Margin="50,100,50,100" Text="Hello, World!!" FontSize="50" TextAlignment="Center" Cursor="" />
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="40,10,40,10"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </Page.Resources>
 
-    </Grid> 
+
+    <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" Height="350">
+        <Button x:Name="button1_page1"  Grid.Row="0" Content="Ренат" Click="button1_page1_Click" />
+        <Button x:Name="button2_page1" Grid.Row="1" Content="Показать" Click="button2_page1_Click" />
+        <Label x:Name="label_page1" Grid.Row="3" Content="c" FontSize="30"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
 
+    </Grid>
 </Page>
