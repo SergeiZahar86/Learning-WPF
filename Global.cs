@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Data.Sqlite;
 
 namespace Learning_WPF
 {
@@ -12,6 +13,9 @@ namespace Learning_WPF
         private static Global instance;
         private String name = "";
         private Semaphore sem;
+
+        SqliteConnection conn;
+
         public string Name
         {
             get => name;
@@ -26,8 +30,16 @@ namespace Learning_WPF
         private Global()
         {
            this.sem = new Semaphore(0, 1);
-
+           this.conn = new SqliteConnection("Data Source=hello.db");
+           this.conn.Open();
         }
+
+        public SqliteCommand getCmd()
+        {
+            return this.conn.CreateCommand();
+        }
+        
+
 
         public static Global getInstance()
         {

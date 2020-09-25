@@ -18,12 +18,16 @@
     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" Height="350">
         <Button x:Name="button1_page1"  Grid.Row="0" Content="Ренат" Click="button1_page1_Click" />
         <Button x:Name="button2_page1" Grid.Row="1" Content="Показать" Click="button2_page1_Click" />
+        <Button x:Name="button3_page1" Grid.Row="2" Content="DB" Click="button3_page1_Click" />
         <Label x:Name="label_page1" Grid.Row="3" Content="c" FontSize="30"/>
+        <TextBox x:Name="textbox1" Grid.Row="4"/>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+
         </Grid.RowDefinitions>
 
 
