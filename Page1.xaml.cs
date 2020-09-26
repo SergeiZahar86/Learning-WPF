@@ -39,14 +39,18 @@ namespace Learning_WPF
 
         private void button3_page1_Click(object sender, RoutedEventArgs e)
         {
+            /*
             
             var cmd = global.getCmd();
             cmd.CommandText = "create table user(id int, name text);";
-              try{
+            try{
                   cmd.ExecuteNonQuery();
             } catch (Exception ex){
                 Console.WriteLine(ex.Message);
             }
+            */
+
+
             /*
             cmd.CommandText = "insert into user values(1,'Jone')";
             cmd.ExecuteNonQuery();
@@ -55,6 +59,7 @@ namespace Learning_WPF
             cmd.ExecuteNonQuery();
             */
 
+            /*
             cmd.CommandText = "select * from user";
             var ret = cmd.ExecuteReader();
             textbox1.Text = "";
@@ -63,7 +68,8 @@ namespace Learning_WPF
                 int id = ret.GetInt32(0);
                 String name = ret.GetString(1);
                 textbox1.Text = textbox1.Text + id + " " + name+"\n";
-                      }
+            }
+            */
 
         }
     }
