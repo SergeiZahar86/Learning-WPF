@@ -10,7 +10,7 @@
     <Page.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="40,10,40,10"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="31"/>
         </Style>
     </Page.Resources>
 
