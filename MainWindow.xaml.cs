@@ -24,15 +24,5 @@ namespace Learning_WPF
             DialogWindoW dialogWindoW = new DialogWindoW();
             dialogWindoW.ShowDialog();
         }
-
-        private void dialog_window_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void dialog_window_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
     }
 }
