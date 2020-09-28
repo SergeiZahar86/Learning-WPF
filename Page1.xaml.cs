@@ -55,7 +55,7 @@ namespace Learning_WPF
             cmd.ExecuteNonQuery();
             */
 
-            cmd.CommandText = "select * from user";
+            cmd.CommandText = "select * from RegistrationUsers";
             var ret = cmd.ExecuteReader();
             textbox1.Text = "";
             while (ret.Read())
